@@ -6,9 +6,11 @@ services:
   php:
     volumes:
       - ~/.config/composer:/home/devilbox/.config/composer:ro${MOUNT_OPTIONS}
+      - ~/.gitconfig:/home/devilbox/.gitconfig:ro${MOUNT_OPTIONS}
   httpd:
     volumes:
       - ~/.config/composer:/home/devilbox/.config/composer:ro${MOUNT_OPTIONS}
+      - ~/.gitconfig:/home/devilbox/.gitconfig:ro${MOUNT_OPTIONS}
   minio:
     image: 'minio/minio:latest'
     ports:
