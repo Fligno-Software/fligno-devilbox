@@ -5,12 +5,14 @@ version: '2.3'
 services:
   php:
     volumes:
-      - ~/.config/composer:/home/devilbox/.config/composer:ro${MOUNT_OPTIONS}
-      - ~/.gitconfig:/home/devilbox/.gitconfig:ro${MOUNT_OPTIONS}
+      - ~/.config/composer:/home/devilbox/.composer:rw
+      - ~/.gitconfig:/home/devilbox/.gitconfig:rw
+      - ~/.ssh:/home/devilbox/.ssh:rw
   httpd:
     volumes:
-      - ~/.config/composer:/home/devilbox/.config/composer:ro${MOUNT_OPTIONS}
-      - ~/.gitconfig:/home/devilbox/.gitconfig:ro${MOUNT_OPTIONS}
+      - ~/.config/composer:/home/devilbox/.composer:rw
+      - ~/.gitconfig:/home/devilbox/.gitconfig:rw
+      - ~/.ssh:/home/devilbox/.ssh:rw
   minio:
     image: 'minio/minio:latest'
     ports:
