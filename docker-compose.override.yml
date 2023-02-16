@@ -3,6 +3,54 @@
 version: '2.3'
 
 services:
+  php53:
+    extends:
+      service: php53
+      file: docker-compose-php-53.yml
+  php54:
+    extends:
+      service: php54
+      file: docker-compose-php-54.yml
+  php55:
+    extends:
+      service: php55
+      file: docker-compose-php-55.yml
+  php56:
+    extends:
+      service: php56
+      file: docker-compose-php-56.yml
+  php70:
+    extends:
+      service: php70
+      file: docker-compose-php-70.yml
+  php71:
+    extends:
+      service: php71
+      file: docker-compose-php-71.yml
+  php72:
+    extends:
+      service: php72
+      file: docker-compose-php-72.yml
+  php73:
+    extends:
+      service: php73
+      file: docker-compose-php-73.yml
+  php74:
+    extends:
+      service: php74
+      file: docker-compose-php-74.yml
+  php80:
+    extends:
+      file: docker-compose-php-80.yml
+      service: php80
+  php81:
+    extends:
+      service: php81
+      file: docker-compose-php-81.yml
+  php82:
+    extends:
+      service: php82
+      file: docker-compose-php-82.yml
   php:
     volumes:
       - ~/.config/composer:/home/devilbox/.composer:rw
