@@ -18,6 +18,7 @@
 /backups/*
 
 # Ignore Data dirs
+/data/www/PHP/*
 /data/www/PHP5.3/*
 /data/www/PHP5.4/*
 /data/www/PHP5.5/*
